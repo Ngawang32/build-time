@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
+.hero {
+  height: 80vh;
+  background: linear-gradient(rgb(216, 200, 171), rgba(0, 0, 0, 0.24)),
+    url(./images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-center h1,
+p,
+a {
+  text-align: center;
+}
+
+a {
+  margin: 0 auto;
+  color: white;
+  font-size: 4rem;
+  float: right;
+}
+
+.btn {
+  background-color: rgb(185, 228, 222, 0.5);
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  border: none;
+  padding: 1rem 1.5rem;
+  color: rgb(206, 187, 184);
+  border-radius: 9px;
+  transition: 0.5s all ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgba(148, 197, 148, 0.75);
+  color: rgb(248, 113, 79);
+  font-size: 2rem;
+}
+
+.nav-btn {
+  padding: 2rem 3rem;
+  color: black;
+  font: 2rem;
+  right: 0;
+  top: 0;
+  position: absolute;
+  padding: 2rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: black;
+  padding: 1rem 2rem;
+}
+/* navbar */
+.navbar {
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.nav-lists {
+  width: 100vw;
+  height: 80vh;
+  display: grid;
+  background: white;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
+.nav-list a {
+  list-style: none;
+  color: black;
+  float: left;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  padding-top: 4rem;
+  padding-left: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  .nav-lists {
+    display: grid;
+    grid-gap: 4rem;
+    grid-template-columns: repeat(4, 1fr);
+    visibility: visible;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    justify-content: space-around;
+  }
+  .close-btn {
+    display: none;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-btn {
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-list a {
+    padding: 0;
+    margin: 0;
+  }
+}
