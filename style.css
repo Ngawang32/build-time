@@ -50,11 +50,17 @@ a {
   transition: 0.5s all ease;
   cursor: pointer;
 }
-
+.hero .btn {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 1rem 3rem;
+  font-size: 1rem;
+}
 .btn:hover {
   background-color: rgba(148, 197, 148, 0.75);
   color: rgb(248, 113, 79);
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .nav-btn {
@@ -139,5 +145,337 @@ a {
   .nav-list a {
     padding: 0;
     margin: 0;
+    text-transform: capitalize;
+  }
+}
+
+/* 
+===================================================================================================
+                                        PILOTS
+===================================================================================================
+*/
+.cards {
+  justify-items: center;
+  width: 100%;
+}
+.card {
+  padding: 2rem;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.card:hover {
+  box-shadow: 10px 10px 10px 5px rgba(209, 209, 182, 0.8);
+  transform: scale(1.2rem);
+}
+.card h3 {
+  font-weight: 100;
+  text-align: center;
+}
+.card .title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.card img {
+  width: 100%;
+  height: 75%;
+  padding: 2rem;
+}
+@media screen and (min-width: 762px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100vw;
+    justify-content: space-around;
+    grid-gap: 2rem;
+  }
+  .card p {
+    width: 35%;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100vw;
+    justify-content: space-around;
+    grid-gap: 2rem;
+  }
+  .card p {
+    width: 35%;
+  }
+}
+.pilot-btn {
+  margin: 1.5rem;
+}
+/* 
+===================================================================================================
+                                        About Us
+===================================================================================================
+*/
+.container {
+  background: linear-gradient(rgba(241, 119, 38, 0.2), rgba(0, 0, 0, 0.1)),
+    url(./images/about.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 0 auto;
+}
+.about-info {
+  border: none;
+  height: 100vh;
+  background: rgba(255, 242, 242, 0.5);
+  position: relative;
+}
+.about-info h1,
+p {
+  color: black;
+  font-size: 25px;
+}
+.about-info h1 {
+  font-size: 48px;
+  font-weight: 900;
+  margin: 1rem;
+}
+.about-info p {
+  color: black;
+  text-align: center;
+  font-weight: 200;
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    height: 100vh;
+  }
+  .about-info {
+    border: 1px solid white;
+    justify-self: end;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    height: 70%;
+    padding: 5rem 8rem 5rem 8rem;
+    margin-right: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+  }
+}
+.about-btn {
+  position: absolute;
+  right: 2%;
+}
+.about-btn:hover {
+  background-color: tomato;
+  color: white;
+}
+
+/* 
+===================================================================================================
+                                        Weather
+===================================================================================================
+*/
+.main {
+  height: 100vh;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(251, 29, 253, 0.3793103448275862) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  position: relative;
+}
+.weather-container {
+  border: 1px solid black;
+  height: 70vh;
+  width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  position: absolute;
+  top: 15%;
+  left: 5%;
+}
+
+.weather {
+  background: url(./images/background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.temperature {
+  padding: 1rem;
+}
+.temperature i {
+  color: white;
+  font-size: 1.3rem;
+  margin-top: 0.3rem;
+}
+/* 
+-----------
+temperature
+-----------
+ */
+.temperature {
+  margin-right: 2rem;
+}
+.temp {
+  color: white;
+  font-size: 3rem;
+}
+.state {
+  font-size: 2rem;
+  color: white;
+}
+
+/* 
+-----------
+date and city
+-----------
+*/
+.weather-info {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: space-around;
+  cursor: pointer;
+}
+.weather-search {
+  display: flex;
+  align-items: center;
+}
+.weather-search i {
+  margin-left: 3rem;
+}
+.weather-location {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+/* search */
+.search-box {
+  max-width: 160px;
+  height: 20px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.search-box:focus {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.search i {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+.search i:hover {
+  font-size: 2.5rem;
+  color: white;
+}
+.date {
+  color: white;
+  margin-right: 5px;
+}
+.city {
+  color: white;
+}
+
+/* weather button */
+.weather-btn {
+  background-color: rgb(131, 58, 180, 0.5);
+  color: gray;
+  margin: 1rem;
+}
+.weather-btn:hover {
+  background-color: white;
+  color: black;
+}
+/* 
+762px
+*/
+@media screen and (min-width: 762px) {
+  .weather {
+    background: url(./images/background.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .weather-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1rem;
+  }
+  .weather-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5rem;
+  }
+  .search-box {
+    padding: 1rem;
+  }
+  .weather-search i {
+    margin-right: 9rem;
+  }
+  .weather-location {
+    width: 100%;
+    margin-top: 1rem;
+    margin-left: 8rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: space-around;
+    align-content: space-between;
+  }
+  .date,
+  .city {
+    font-size: 1.2rem;
+    margin-bottom: -1rem;
+  }
+  .date {
+    margin-bottom: 1rem;
+    padding-bottom: 0.3rem;
+  }
+}
+/* 
+1170px
+*/
+@media screen and (min-width: 992px) {
+  .weather-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+  }
+  .weather {
+    background: url(./images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+  }
+  .weather-search {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+  }
+  .weather-info {
+    width: 70%;
+    height: 100%;
+  }
+  .search-box {
+    margin-left: 3rem;
+  }
+  .search {
+    margin-left: 9rem;
   }
 }
